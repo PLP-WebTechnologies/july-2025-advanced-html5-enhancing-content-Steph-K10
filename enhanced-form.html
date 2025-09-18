@@ -1,0 +1,153 @@
+<!-- Designing a results announcement page of a company's scavenger hunt competition, which also requests feedback on the event and asks emploees to offers suggestions and food options for the next event-->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cavenger Hunt Results</title>
+ </head>
+ <body>
+    <header>
+        <h1>Solari Holdings Annual Company-Wide Scavenger Hunt</h1>
+    </header>
+
+    <main>
+        <section aria-labelledby="winners-heading">
+            <h2 id="winners-heading">Official Results</h2>
+            <div class="banner" aria-label="Congratulations Scavenger Hunt Winners">
+                Congratulations Scavenger Hunt Winners!
+            </div>
+            
+            <p>We're thrilled to announce the winners of our annual scavenger hunt competition. This year's event was our most successful yet, with a whopping 84 participants across all departments.</p>
+            
+            <h3>Top Performers</h3>
+            <table border="1">
+                <caption><strong>Scavenger Hunt Results</strong></caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Clues Solved</th>
+                        <th>Prizes Won</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="winner-badge" aria-label="First Place">1st: </span>Daisy Walela </td>
+                        <td>Marketing</td>
+                        <td>24/25</td>
+                        <td>Paid 4-day Weekend getaway to Malindi, Shiny Trophy</td>
+                    </tr>
+                    <tr>
+                        <td><span class="winner-badge" aria-label="Second Place">2nd: </span>Mama Wimeidit </td>
+                        <td>Engineering</td>
+                        <td>23/25</td>
+                        <td>Sennheiser Premium headphones, 5k Naivas Gift card</td>
+                    </tr>
+                    <tr>
+                        <td><span class="winner-badge" aria-label="Third Place">3rd: </span>Wacha Fitina </td>
+                        <td>Sales</td>
+                        <td>21/25</td>
+                        <td>10k Naivas Gift card, Company swag</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h3>Event Highlights</h3>
+            <ul>
+                <li>Most creative solution: Team Innovate (HR Department) breakdancing in exchange for a free clue</li>
+                    <img src="./images/breakdance-on-the-roof.jpg" alt="Businessman breakdancing on the roof">
+                <li>Fastest clue solved: "The Anguka Nayo Paradox" (Solved in 2min 13sec by Team Floating is not always Constant(Operations Dept.))</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="feedback-heading">
+            <h2 id="feedback-heading">Event Feedback</h2>
+            <p>We value your input! Please share your experience and suggestions for future events.</p>
+            
+            <form id="feedback-form" novalidate>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="name" class="required">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name" autocomplete="name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="required">Email Address</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@company.com" autocomplete="email">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="department">Department</label>
+                        <input type="text" id="department" name="department" placeholder="Which department are you in?" list="departments" autocomplete="organization">
+                        <datalist id="departments">
+                            <option value="Engineering">
+                            <option value="Marketing">
+                            <option value="Sales">
+                            <option value="Human Resources">
+                            <option value="Finance">
+                            <option value="Operations">
+                        </datalist>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Event Feedback</legend>
+                    
+                    <div class="form-group">
+                        <label class="required">How would you rate the scavenger hunt?</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="rating" value="5" required> Excellent
+                            </label>
+                            <label>
+                                <input type="radio" name="rating" value="4"> Very Good
+                            </label>
+                            <label>
+                                <input type="radio" name="rating" value="3"> Good
+                            </label>
+                            <label>
+                                <input type="radio" name="rating" value="2"> Fair
+                            </label>
+                            <label>
+                                <input type="radio" name="rating" value="1"> Poor
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="food" class="required">What food would you like for our next team lunch?</label>
+                        <input type="text" id="food" name="food" required placeholder="e.g., Pizza, Smocha, Kibandaski classics" autocomplete="off">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dietary">Dietary Restrictions</label>
+                        <select id="dietary" name="dietary">
+                            <option value="">Select any dietary restrictions</option>
+                            <option value="vegetarian">Vegetarian</option>
+                            <option value="vegan">Vegan</option>
+                            <option value="gluten-free">Gluten-Free</option>
+                            <option value="dairy-free">Dairy-Free</option>
+                            <option value="nut-allergy">Nut Allergy</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="activities">Suggestions for another team building activity</label>
+                        <textarea id="activities" name="activities" placeholder="What activity would you like to see in the future?" rows="4"></textarea>
+                        <p class="instructions">This field is optional. Share your ideas for our next event!</p>
+                    </div>
+                </fieldset>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Solari Holdings Limited. All rights reserved.</p>
+        <p>For questions about the event or results, please contact teambuildingevents@outlook.com</p>
+    </footer>
+ </body>
+ </html>
